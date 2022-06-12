@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <nav class="flexContainer">
+      <input type="checkbox" class="checkbox" id="darkMode" />
+
+      <label
+        class="flexContainer darkModeSwitch"
+        id="darkModeSwitch"
+        for="darkMode"
+      >
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+        <div class="ball" id="ball"></div>
+      </label>
+    </nav>
+    <main class="flexContainer principalContent">
+      <aside class="bgPhone">
+        <section class="imgContainer" id="phoneScreen">
+          <img
+            src="./assets/imageTrasition1.png"
+            alt=""
+            class="imgHidden imgDisplay"
+          />
+
+          <img src="./assets/imageTrasition2.png" alt="" class="imgHidden" />
+
+          <img src="./assets/imageTrasition3.png" alt="" class="imgHidden" />
+
+          <img
+            src="./assets/imageTrasition4.png"
+            alt=""
+            class="imgHidden imgTransition"
+          />
+        </section>
+      </aside>
+
+      <article class="flexContainer areaContent">
+        <section class="flexContainer areaLogin" id="areaLogin">
+          <a class="linkLogo" href="index.html">
+            <img
+              class="logo"
+              id="logo"
+              src="./assets/instagramLogo.png"
+              alt="Instagram Logo"
+            />
+          </a>
+
+          <form class="flexContainer areaForm">
+            <label class="flexContainer areaInput" id="login">
+              <span class="textInput" id="textLogin">
+                Telefone, nome de usuário ou email
+              </span>
+              <input
+                class="input"
+                id="inputLogin"
+                onfocus="loginSelected()"
+                onblur="loginNotSelected()"
+                oninput="loginChanged()"
+                aria-label="Telefone, nome de usuário ou email"
+                autocomplete="off"
+                maxlength="75"
+                type="text"
+                name="username"
+              />
+            </label>
+
+            <label class="areaInput" id="password">
+              <span class="textInput" id="textPassword">Senha</span>
+              <input
+                class="input"
+                id="inputPassword"
+                onfocus="passwordSelected()"
+                onblur="passwordNotSelected()"
+                oninput="passwordChanged()"
+                aria-label="Senha"
+                type="password"
+                name="password"
+              />
+              <img
+                class="eyeButton"
+                id="imgPassword"
+                src="./assets/eye.svg"
+                alt=""
+              />
+            </label>
+
+            <button class="btn" id="btnLogin" type="submit" disabled="">
+              Entrar
+            </button>
+
+            <div class="flexContainer divisor">
+              <span class="divisorLine"></span>
+              <span class="divisorText">ou</span>
+              <span class="divisorLine"></span>
+            </div>
+
+            <button class="flexContainer btnFacebook">
+              <img
+                class="logoFacebook"
+                src="./assets/spriteFacebookIcon.png"
+                alt=""
+              />
+              <span class="textFacebook">Entrar com o Facebook</span>
+            </button>
+
+            <a class="forgotPassword" id="forgotPassword" href=""
+              >Esqueceu a senha?</a
+            >
+          </form>
+        </section>
+
+        <section class="flexContainer areaRegister" id="areaRegister">
+          <div class="containerRegister">
+            <p class="textRegister" id="textRegister">
+              Não tem uma conta?
+              <a class="linkRegister" href="">Cadastre-se</a>
+            </p>
+          </div>
+        </section>
+
+        <section class="flexContainer">
+          <p class="textApp" id="textApp">Obtenha o aplicativo.</p>
+          <div class="flexContainer containerApp">
+            <a class="linkApp" href="">
+              <img class="imgApp" src="./assets/appleButton.png" alt="" />
+            </a>
+            <a href="">
+              <img class="imgApp" src="./assets/googleplayButton.png" alt="" />
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="flexContainer" id="footer">
+      <section class="flexContainer linksFooter">
+        <div class="flexContainer instaLinksContainer">
+          <a class="instaLinks" href="">Meta</a>
+          <a class="instaLinks" href="">Sobre</a>
+          <a class="instaLinks" href="">Blog</a>
+          <a class="instaLinks" href="">Carreiras</a>
+          <a class="instaLinks" href="">Ajuda</a>
+          <a class="instaLinks" href="">Api</a>
+          <a class="instaLinks" href="">Privacidade</a>
+          <a class="instaLinks" href="">Termos</a>
+          <a class="instaLinks" href="">Principais contas</a>
+          <a class="instaLinks" href="">Hashtags</a>
+          <a class="instaLinks" href="">Localizações</a>
+          <a class="instaLinks" href="">Instagram Lite</a>
+          <a class="instaLinks" href=""
+            >Carregamento de contatos e não usuários</a
+          >
+        </div>
+
+        <div class="flexContainer instaLinksContainer">
+          <a class="instaLinks" href="">Dança</a>
+          <a class="instaLinks" href="">Comida e bebida</a>
+          <a class="instaLinks" href="">Casa e jardim</a>
+          <a class="instaLinks" href="">Música</a>
+          <a class="instaLinks" href="">Artes visuais</a>
+        </div>
+      </section>
+
+      <section class="flexContainer pageInfos">
+        <div class="flexContainer languageSelect">
+          <p>Português (Brasil)</p>
+          <span class="iconSelect">
+            <svg
+              aria-label="Ícone de seta para baixo"
+              class="_8-yf5"
+              color="#8e8e8e"
+              fill="#8e8e8e"
+              height="12"
+              role="img"
+              viewBox="0 0 24 24"
+              width="12"
+            >
+              <path
+                d="M21 17.502a.997.997 0 01-.707-.293L12 8.913l-8.293 8.296a1 1 0 11-1.414-1.414l9-9.004a1.03 1.03 0 011.414 0l9 9.004A1 1 0 0121 17.502z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+        <div class="copyInfo">
+          <p>&copy; 2022 InstaClone by Arthur Augusto</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1ea21a5cf7.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
